@@ -1,6 +1,6 @@
 #include <stdio.h>
-/**:%s/\s\+$//g
-  main -Using puts to print a line in C
+/**
+  main - Using puts to print a line in C
  *
  * Return: Always 0 (Success)
  */
