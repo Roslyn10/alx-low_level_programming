@@ -1,4 +1,4 @@
-#include <studio.h>
+#include <stdio.h>
 /**
  * main -Using puts to print a line in C 
  *
