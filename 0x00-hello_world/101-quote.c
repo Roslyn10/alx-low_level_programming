@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - Prints quote
+ * main - Print quote
  *
  * Return: Always 1 (Failure)
  */
