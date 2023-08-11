@@ -6,7 +6,8 @@
  */
 int main(void)
 {
-char message[] = "and that piece of art is useful\n" - Dora Korpar, 2015-10-19\n";
-fputs(message, stderr);
+FILE *file = stderr;
+char message[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+fputs(message, file);
 return (1);
 }
