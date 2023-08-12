@@ -21,10 +21,10 @@ int main(void)
 	}
 	else if (n == 0)
 	{
-	  	printf("zero\n");
+		printf("zero\n");
 	}
 	else
-       	{
+  {
 	
 		printf("negative\n");
 	}
