@@ -5,7 +5,7 @@
  * Return: Always 0 (Success)
  */
 int main(void)
-{ 
+{
 	char letter;
 	char LETTER;
 
@@ -20,5 +20,4 @@ int main(void)
 	putchar('\n');
 
 	return (0);
-}
-		
+}		
