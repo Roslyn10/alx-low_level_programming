@@ -6,14 +6,17 @@
  */
 int main(void)
 {
-	int num;
+	char digit = '0';
+	char newline = '\n';
 
-	for (num = 0; num < 10; num++)
+	while (digit <= '9')
 	{
-		putchar(num + '0');
-		if (num < 9 );
+		putchar(digit);
+		digit++;
+		
 	}
-	putchar('\n');
+
+	putchar(newline);
 
 	return (0);
 }
