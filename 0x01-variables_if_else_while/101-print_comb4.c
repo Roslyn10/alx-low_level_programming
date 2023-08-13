@@ -19,7 +19,7 @@ int main(void)
 				putchar(second_digit + '0');
 				putchar(third_digit + '0');
 
-				if (!(first_digit ==7 && second_digit == 8 && third_digit == 9))
+				if (!(first_digit == 7 && second_digit == 8 && third_digit == 9))
 				{
 					putchar(',');
 					putchar(' ');
