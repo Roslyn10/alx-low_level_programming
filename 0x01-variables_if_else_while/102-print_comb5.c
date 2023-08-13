@@ -18,6 +18,7 @@ int main(void)
 				{
 					putchar(f_digit + '0');
 					putchar(s_digit + '0');
+					putchar(' ');
 					putchar(t_digit + '0');
 					putchar(fo_digit + '0');
 
