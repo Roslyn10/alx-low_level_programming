@@ -1,6 +1,6 @@
-#include <stdio.h> 
+#include <stdio.h>
 #include <stdlib.h>
-#include <time.h> 
+#include <time.h>
 #include <stddef.h>
 /**
  * main - Prints all possible combinations of singel-digit numbers
@@ -18,6 +18,7 @@ int main(void)
 		if (n != 9)
 		{
 			putchar(',');
+			putchar(' ');
 		}
 	}
 
