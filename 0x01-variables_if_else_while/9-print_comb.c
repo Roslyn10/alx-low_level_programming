@@ -3,7 +3,7 @@
 #include <time.h>
 #include <stddef.h>
 /**
- * main - Prints all possible combinations of singel-digit numbers
+ * main - Prints all possible combinations of single-digit numbers
  *
  * Return: Always 0 (Success)
  */
