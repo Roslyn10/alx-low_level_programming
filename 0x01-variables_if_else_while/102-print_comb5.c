@@ -4,7 +4,7 @@
  *
  * Return: Always (0) (Success)
  */
-int main(voi)
+int main(void)
 {
 	int f_digit, s_digit, t_digit, fo_digit;
 
