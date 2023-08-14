@@ -6,7 +6,6 @@
  */
 int main(void)
 {
-{
     int f_digit, s_digit, t_digit, fo_digit;
 
     for (f_digit = 0; f_digit <= 9; f_digit++)
