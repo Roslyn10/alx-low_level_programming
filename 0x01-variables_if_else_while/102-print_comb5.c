@@ -18,7 +18,7 @@ int main(void)
 				{
 					if (f_digit * 10 + s_digit < t_digit * 10 + fo_digit)
 					{
-						putchar(f_digit +'0');
+						putchar(f_digit + '0');
 						putchar(s_digit + '0');
 						putchar(' ');
 						putchar(t_digit + '0');
@@ -28,7 +28,6 @@ int main(void)
 							putchar(',');
 							putchar(' ');
 						}
-						
 					}
 				}
 			}
@@ -37,5 +36,5 @@ int main(void)
 
 	putchar('\n');
 
-	return 0;
+	return (0);
 }
