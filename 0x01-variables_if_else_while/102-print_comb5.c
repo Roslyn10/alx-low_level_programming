@@ -23,6 +23,7 @@ int main(void)
 						putchar(' ');
 						putchar(t_digit + '0');
 						putchar(fo_digit + '0');
+
 						if (!(f_digit == 9 && s_digit == 8 && t_digit == 9 && fo_digit == 9))
 						{
 							putchar(',');
