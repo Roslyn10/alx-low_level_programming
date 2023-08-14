@@ -18,11 +18,13 @@ int main(void)
 			if (!(first_digit == 8 && second_digit ==0))
 			{
 				putchar(',');
-				putchar('');
+				putchar(' ');
 			}
 		}
 	}
 
 	putchar('\n');
 
-	
+	return (0);
+
+} 	
