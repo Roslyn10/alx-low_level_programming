@@ -2,6 +2,7 @@
 /**
  * print_sign - +; - or 0
  * Description - Prints 1 if positive, 0 if 0 and  if negative
+ * @n: Can either be positive, negative or zero
  * Return: 1 if +, 0 if 0, -1 if-
  */
 int print_sign(int n)
