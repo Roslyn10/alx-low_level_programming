@@ -1,8 +1,9 @@
 #include "main.h"
 /**
- * int _islower - Checks for lower case 
- * Description - Returns 0 for every other letter exept c 
- * Return: 1 for lowercase c and 0 for every other letter 
+ * islower - Checks for lower case
+ * c rreturns 1
+ * Description - Returns 0 for every other letter
+ * Return: 1 for lowercase c and 0 for every other letter
  */
 int _islower(int c)
 {
@@ -12,7 +13,7 @@ int _islower(int c)
 	}
 	else
 	{
-		return(0);
+		return (0);
 	}
 }
 
