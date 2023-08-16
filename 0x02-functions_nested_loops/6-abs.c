@@ -3,11 +3,17 @@
  * _abs - Returns the absolute value of an integer
  * Description - Computes the absoukte value of an integer
  * Return: Absolute value of integer
- * @q: Number 
+ * @q: Number
  */
-int _abs(int)
+int _abs(int q)
 {
-	int = q;
 
 	if (q < 0)
-		Return
+	{
+		return (-q);
+	}
+	else
+	{
+		return (q);
+	}
+}
