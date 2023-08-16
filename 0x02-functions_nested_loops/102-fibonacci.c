@@ -6,17 +6,17 @@
  */
 int main(void)
 {
-	long long  f = 1;
-	long long  i = 2;
+	long int  f = 1;
+	long int  i = 2;
 
 	for
-		(b <= 20365011074);
+		(i <= 20365011074);
 	b++;
 	{
-		printf("%lld + %lld", f, i);
+		printf("%d + %d", f, i);
 			printf(", ");
 
-			long long temp = f;
+			long int temp = f;
 
 			f = i;
 
