@@ -10,10 +10,10 @@ int main(void)
 	long int  i = 2;
 
 	for
-		(i <= 20365011074);
-	b++;
+		(i == 1;i <= 20365011074;);
+	i++;
 	{
-		printf("%d + %d", f, i);
+		printf("%ld + %ld", f, i);
 			printf(", ");
 
 			long int temp = f;
