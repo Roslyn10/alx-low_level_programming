@@ -9,19 +9,16 @@ int main(void)
 	long int  f = 1;
 	long int  i = 2;
 
-	for
-		(i == 1;i <= 20365011074;);
-	i++;
+	for(i = 1;i <= 20365011074; i++);
 	{
 		printf("%ld + %ld", f, i);
-			printf(", ");
+		printf(", ");
 
-			long int temp = f;
-
-			f = i;
-
-			1 += temp;
+		long int temp = f;
+		f = i;
+		i += temp;
 	}
+
 
 	return (0);
 }
