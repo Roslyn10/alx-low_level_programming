@@ -7,9 +7,9 @@
  */
 int print_last_digit(int d)
 {
-	if (d <= 9)
+	if (d < 0)
 	{
-		_putchar(d);
+		_putchar(d * -1);
 		return (d);
 	}
 	else
