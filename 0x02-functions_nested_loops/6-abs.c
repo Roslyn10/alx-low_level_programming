@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * _abs - Returns the absolute value of an integer
- * Description - Computes the absoukte value of an integer
+ * Description -i Computes the absoute value of an integer
  * Return: Absolute value of integer
  * @q: Number
  */
