@@ -10,9 +10,9 @@ int main(void)
 	long int  i;
 	int temp;
 
-	for (i = 1;i <= 20365011074; i++)
+	for (i = 1; i <= 20365011074; i++)
 	{
-		printf("%ld + %ld", f, i);
+		printf("%ld", i);
 		printf(", ");
 
 		temp = f;
