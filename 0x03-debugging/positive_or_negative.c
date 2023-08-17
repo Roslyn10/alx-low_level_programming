@@ -6,7 +6,7 @@
  * Return: 0 Always (Success)
  */
 
-int main(void)
+int positive_or_negative(int i)
 {
 	int i;
 
@@ -22,5 +22,5 @@ int main(void)
 	{
 		printf("%d is negative\n", i);
 	
-	return (0);}
+	return (0);
 }
