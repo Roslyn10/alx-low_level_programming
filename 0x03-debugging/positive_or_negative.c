@@ -1,4 +1,9 @@
 #include "main.h"
+/**
+ * positive_or_negative - Checks whether the given integer is + or -
+ * Description - Checks whether any given number is +, - or 0
+ * Return: void 
+ * /
 
 void positive_or_negative(int i)
 {
