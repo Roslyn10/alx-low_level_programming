@@ -9,14 +9,15 @@ int main(void)
 	long int f = 1;
 	long int i = 2;
 	long int fib50 = 20365011074;
+	int temp;
 
-	printf("%d, %ld, ", f, i);
+	printf("%ld, %ld, ", f, i);
 
-	while (i <= fibo50)
+	while (i <= fib50)
 	{
 		printf("%ld", i);
 
-		if (i + f <= fibo50)
+		if (i + f <= fib50)
 		{
 			printf(", ");
 		}
