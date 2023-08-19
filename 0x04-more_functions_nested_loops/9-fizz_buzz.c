@@ -15,7 +15,7 @@ int main(void)
 
 	if (z % 15 == 0)
 	{
-		printf("FIzzBuzz ");
+		printf("FizzBuzz ");
 	}
 	else if (z % 3 == 0)
 	{
