@@ -6,20 +6,28 @@
  */
 int main(void)
 {
-	long int  f = 1;
-	long int  i;
-	int temp;
+	long int f = 1;
+	long int i = 2;
+	long int fib50 = 20365011074;
 
-	for (i = 1; i <= 20365011074; i++)
+	printf("%d, %ld, ", f, i);
+
+	while (i <= fibo50)
 	{
 		printf("%ld", i);
-		printf(", ");
+
+		if (i + f <= fibo50)
+		{
+			printf(", ");
+		}
+
 
 		temp = f;
 		f = i;
 		i += temp;
 	}
 
+	printf("\n");
 
 	return (0);
 }
