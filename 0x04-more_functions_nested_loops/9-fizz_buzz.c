@@ -11,19 +11,22 @@ int main(void)
 	int z = 1;
 
 	while (z <= 100)
-	{	
+	{
 
 	if (z % 15 == 0)
 	{
-		printf("FIzzBuzz ");
+		printf("FIzzBuzz");
+		printf(" ");
 	}
 	else if (z % 3 == 0)
 	{
-		printf("Fizz ");
+		printf("Fizz");
+		printf(" ");
 	}
 	else if (z % 5 == 0)
 	{
 		printf("Buzz ");
+		printf(" ");
 	}
 	else
 	{
