@@ -18,6 +18,7 @@ int main(void)
 		printf("%ld", i);
 
 		if (i + f <= limit)
+			break;
 		{
 			printf(", ");
 		}
