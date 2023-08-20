@@ -8,16 +8,16 @@ int main(void)
 {
 	long int f = 1;
 	long int i = 2;
-	long int fib50 = 20365011074;
+	long int limit = 20365011074;
 	int temp;
 
 	printf("%ld, %ld, ", f, i);
 
-	while (i <= fib50)
+	while (i <= limit)
 	{
 		printf("%ld", i);
 
-		if (i + f <= fib50)
+		if (i + f <= limit)
 		{
 			printf(", ");
 		}

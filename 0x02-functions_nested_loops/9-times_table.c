@@ -4,7 +4,7 @@
  * Description - Prints the times table of 9
  * Return: void
  * @m: Inserted number
- * @l: 
+ * @l: 9 times table
  */
 void times_table(void)
 {
@@ -13,7 +13,9 @@ void times_table(void)
 
 	for (m = 1; m <= 10; m++)
 	{
-		_putchar(l * m + '0');
+		int result = l * m;
+
+		_putchar(result);
 		_putchar('\n');
 	}
 }
