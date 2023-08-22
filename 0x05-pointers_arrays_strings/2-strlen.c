@@ -3,7 +3,7 @@
  * _strlen - Calculates the length of a string
  * Description - Calculate the length of a given string
  * @s: String
- * Return: 0 Always (Success)
+ * Return: int length
  */
 int _strlen(char *s)
 {
