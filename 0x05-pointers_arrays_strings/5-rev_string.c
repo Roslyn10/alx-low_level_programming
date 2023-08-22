@@ -11,9 +11,15 @@ void rev_string(char *s)
 	int r, v;
 	char e;
 
-	length = strlen;
+	while (s[length] != '\0')
+	{
+		length++;
+	}
 
-	for (r = 0; v = length - 1; r < v; r++, v--)
+	r = 0;
+	v = length -1;
+
+	for (r < v; r++, v--)
 	{
 		e = s[r];
 		s[r] = s[v];
