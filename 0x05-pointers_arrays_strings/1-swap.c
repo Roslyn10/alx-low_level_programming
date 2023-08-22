@@ -4,11 +4,12 @@
  * Description - Function swaps the valuse of two integers
  * @a: First given integer
  * @b: Second given integer
+ * @c: temporary value of a 
  * Reurn: 0 Always(Success)
  */
 void swap_int(int *a, int *b)
 {
-	int temp = *a;
+	int c = *a;
 	*a = *b;
-	*b = temp;
+	*b = c;
 }
