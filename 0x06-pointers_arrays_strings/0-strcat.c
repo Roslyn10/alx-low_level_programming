@@ -3,7 +3,7 @@
  * *_strcat - Concatenates two strings
  * Description - Combines two strings
  * @src: String 1
- * @dest: String 2 
+ * @dest: String 2
  * Return: dest sting
  */
 char *_strcat(char *dest, char *src)
@@ -25,5 +25,5 @@ char *_strcat(char *dest, char *src)
 		k++;
 	}
 	dest[f] = '\0';
-	return(dest);
+	return (dest);
 }
