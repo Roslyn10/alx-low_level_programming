@@ -16,4 +16,23 @@ char *cap_string(char *cap)
 		while (!(cap[e] >= 'a'&& cap[e] <= 'z'))
 			e++;
 
-		if (c	
+		if (cap[e - 1] == ' ' ||
+				cap[e - 1] == '\t' ||
+				cap[e - 1] == '\n' ||
+				cap[e - 1] == ',' ||
+				cap[e - 1] == ';' ||
+				cap[e - 1] == '.' ||
+				cap[e - 1] == '!' ||
+				cap[e - 1] == '?' ||
+				cap[e - 1] == '"' ||
+				cap[e - 1] == '(' ||
+				cap[e - 1] == ')' ||
+				cap[e - 1] == '{' ||
+				cap[e -1 ] == '}' ||
+				cap == 0)
+				cap[e] -= 32;
+				e++;
+	}
+	return (cap);
+}
+				
