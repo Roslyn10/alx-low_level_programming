@@ -7,7 +7,7 @@
 char *rot13(char *r)
 {
 	char Nalpha[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	char rotalpha[] ="nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+	char rotalpha[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 	int o;
 	int t;
 
@@ -23,4 +23,4 @@ char *rot13(char *r)
 		}
 	}
 	return (r);
-}	
+}
