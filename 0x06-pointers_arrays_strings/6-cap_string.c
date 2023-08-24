@@ -16,4 +16,4 @@ char *cap_string(char *cap)
 		while (!(cap[e] >= 'a'&& cap[e] <= 'z'))
 			e++;
 
-		if 
+		if (c	
