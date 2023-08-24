@@ -6,7 +6,7 @@
  * @str: begins the string
  * Return: str
  */
- char *string_toupper(char *)
+ char *string_toupper(char *str)
 {
 	char *ptr = str;
 
