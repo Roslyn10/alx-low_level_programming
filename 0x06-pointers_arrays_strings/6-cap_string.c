@@ -9,4 +9,11 @@
  */
 char *cap_string(char *cap)
 {
+	int e = 0;
 
+	while (cap[e])
+	{
+		while (!(cap[e] >= 'a'&& cap[e] <= 'z'))
+			e++;
+
+		if 
