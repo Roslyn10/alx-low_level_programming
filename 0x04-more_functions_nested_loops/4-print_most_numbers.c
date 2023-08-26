@@ -3,7 +3,6 @@
 /**
  * print_most_numbers - Prints numbers except 2 and 4
  * Description - Prints numbers except 2 and 4, followed by a new line
- * @r: Given int
  * Return: 0 Always (Success)
  */
 void print_most_numbers(void)
