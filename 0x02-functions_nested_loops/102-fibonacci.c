@@ -15,20 +15,20 @@ int main(void)
 
 	while (i <= limit)
 	{
-		printf("%ld", i);
-
-		if (i + f > limit)
-			break;
-		{
-			printf(", ");
-		}
-
-
 		temp = f;
 		f = i;
 		i += temp;
-	}
 
+		if (i <= limit)
+		{
+			printf("%ld", i);
+
+			if (i + f <= limit)
+			{
+				printf(",");
+			}
+		}
+	}
 	printf("\n");
 
 	return (0);
