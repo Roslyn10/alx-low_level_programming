@@ -3,7 +3,7 @@
 /**
  * print_line - Draws a straight line in the terminal
  * Description - Dreaws a straight line in the terminal using #
- * Return: 0 Always (Success)
+ * @n: Number of times the character is printed
  */
 void print_line(int n)
 {
