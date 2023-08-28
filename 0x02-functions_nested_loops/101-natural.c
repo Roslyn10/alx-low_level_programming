@@ -1,7 +1,7 @@
 #include <stdio.h>
-/*
- * main - Sum of the multiples
- * Description - Calculates the sum of multiples og 3 and 5 below 1024
+/**
+ * main - Calcuates the sum of the multiples of 3 and 5
+ * Description - Calculates the sum of multiples of 3 and 5 below 1024
  * Return: 0 Always (Succes)
  */
 int main(void)
