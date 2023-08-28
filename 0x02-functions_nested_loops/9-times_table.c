@@ -3,8 +3,9 @@
  * times_table - Prints the times table
  * Description - Prints the times table of 9
  * Return: void
- * @m: Inserted number
- * @l: 9 times table
+ * @r: Inserted number
+ * @o: Second inserted number
+ * @t: 9 times table
  */
 void times_table(void)
 {
