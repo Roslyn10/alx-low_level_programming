@@ -13,22 +13,23 @@ int main(void)
 
 	printf("%ld, %ld, ", f, i);
 
-	while (i <= limit)
+	while (1)
 	{
 		temp = f;
 		f = i;
 		i += temp;
 
-		if (i <= limit)
-		{
-			printf("%ld", i);
+		if (i > limit)
+			break;
 
-			if (i + f <= limit)
-			{
-				printf(",");
-			}
+		printf("%ld", i);
+
+		if (i + f <= limit)
+		{
+			printf(",");
 		}
 	}
+
 	printf("\n");
 
 	return (0);
