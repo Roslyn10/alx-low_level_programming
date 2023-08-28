@@ -16,7 +16,7 @@ int main(void)
 		k = w + y;
 
 		if (k > 400000)
-			brek;
+			break;
 
 		if (k % 2 == 0)
 		{
