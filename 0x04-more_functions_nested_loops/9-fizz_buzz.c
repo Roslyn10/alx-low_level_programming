@@ -27,7 +27,7 @@ int main(void)
 	}
 	else
 	{
-		printf("%d ", z);
+		printf(" %d ", z);
 	}
 		z++;
 	}
