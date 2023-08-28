@@ -11,10 +11,9 @@ int main(void)
 	unsigned int d = 1;
 	unsigned int e = 2;
 	unsigned int z;
+	int v;
 
 	printf("%u, %u, ", d, e);
-
-	int v;
 
 	for (v = 3; v <= 98; v++)
 	{
