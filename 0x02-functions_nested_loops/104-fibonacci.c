@@ -7,7 +7,6 @@
  */
 int main(void)
 {
-	int h = 98;
 	unsigned int d = 1;
 	unsigned int e = 2;
 	unsigned int z;
