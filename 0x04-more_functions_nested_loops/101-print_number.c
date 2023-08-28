@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_number(int n) - Prints an integer
+ * print_number - Prints an integer
  * Description - Prints given integer
  * Return: 0 Always (Success)
  * @n: Given number
@@ -18,5 +18,5 @@ void print_number(int n)
 		print_number(n / 10);
 	}
 
-	_putchar('0'+ n % 10);
+	_putchar('0' + n % 10);
 }
