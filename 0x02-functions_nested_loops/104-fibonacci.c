@@ -12,7 +12,7 @@ int main(void)
 	unsigned int e = 2;
 	unsigned int z;
 
-	printf("%lu, %lu, ", d, e);
+	printf("%u, %u, ", d, e);
 
 	int v;
 
