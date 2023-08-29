@@ -15,14 +15,18 @@ int main(void)
 		f /= 2;
 	}
 
-	for (r = 3; r * r <= r; r += 2)
+	for (r = 3; r * r <= f; r += 2)
 	{
 		while (f % r == 0)
 		{
 			f /= r;
 		}
 	}
-	printf("%ld\n", f);
+
+	if (f > 1)
+	{
+		printf("%ld\n", f);
+	}
 
 	return (0);
 }
