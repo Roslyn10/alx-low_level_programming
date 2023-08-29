@@ -8,26 +8,21 @@ int main(void)
 {
 	long int f = 1;
 	long int i = 2;
-	long int limit = 20365011074;
-	int temp;
+	int fibo = 50;
+	int c = 0;
+	long int temp;
 
 	printf("%ld, %ld, ", f, i);
 
-	while (1)
+	while (c < fibo - 2)
 	{
 		temp = f;
 		f = i;
 		i += temp;
 
-		if (i > limit)
-			break;
+		printf(", %ld", i);
 
-		printf("%ld", i);
-
-		if (i + f <= limit)
-		{
-			printf(",");
-		}
+		c++;
 	}
 
 	printf("\n");
