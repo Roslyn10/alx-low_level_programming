@@ -9,25 +9,25 @@ int main(void)
 	int w = 1;
 	int y = 2;
 	int k;
-	int even_num = 2;
+	int even_sum = 2;
 
 	while (1)
 	{
 		k = w + y;
 
-		if (k > 400000)
+		if (k > 4000000)
 			break;
 
 		if (k % 2 == 0)
 		{
-			even_num += k;
+			even_sum += k;
 		}
 
 		w = y;
 		y = k;
 	}
 
-	printf("%d\n", even_num);
+	printf("%d\n", even_sum);
 
 	return (0);
 }
