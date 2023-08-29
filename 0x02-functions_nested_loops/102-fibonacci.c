@@ -12,7 +12,7 @@ int main(void)
 	int c = 0;
 	long int temp;
 
-	printf("%ld, %ld, ", f, i);
+	printf("%ld, %ld", f, i);
 
 	while (c < fibo - 2)
 	{
