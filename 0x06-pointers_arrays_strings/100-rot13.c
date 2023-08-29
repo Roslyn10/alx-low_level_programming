@@ -2,6 +2,7 @@
 /**
  * *rot13 - Encodes a string using rot13
  * Description - Encodes a string rot13
+ * @r: Pointer to character array
  * Return: r char
  */
 char *rot13(char *r)
@@ -11,7 +12,7 @@ char *rot13(char *r)
 	int o;
 	int t;
 
-	for (o = 0; r[o] != '\0'; r++)
+	for (o = 0; r[o] != '\0'; o++)
 	{
 		for (t = 0; t < 52; t++)
 		{
