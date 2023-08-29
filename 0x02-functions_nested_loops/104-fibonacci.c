@@ -7,18 +7,18 @@
  */
 int main(void)
 {
-	unsigned int d = 1;
-	unsigned int e = 2;
-	unsigned int z;
+	unsigned long long d = 1;
+	unsigned long long e = 2;
+	unsigned long long z;
 	int v;
 
-	printf("%u, %u, ", d, e);
+	printf("%llu, %llu, ", d, e);
 
 	for (v = 3; v <= 98; v++)
 	{
 		z = d + e;
 
-		printf("%u", z);
+		printf("%llu", z);
 
 		if (v < 98)
 		{
