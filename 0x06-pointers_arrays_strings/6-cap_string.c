@@ -4,7 +4,6 @@
  * *cap_string - Capitalizes all words in a string
  * Description - Capitalizes all the words of a given string
  * @cap: Given string
- * @e: Number of integers in the array
  * Return: cap
  */
 char *cap_string(char *cap)
@@ -28,13 +27,12 @@ char *cap_string(char *cap)
 				cap[e - 1] == '(' ||
 				cap[e - 1] == ')' ||
 				cap[e - 1] == '{' ||
-				cap[e -1 ] == '}' ||
+				cap[e - 1] == '}' ||
 				cap[e - 1] == 0)
-			{
-				cap[e] -= 32;
-			}
-				e++;
+		{
+			cap[e] -= 32;
+		}
+		e++;
 	}
 	return (cap);
 }
-				
