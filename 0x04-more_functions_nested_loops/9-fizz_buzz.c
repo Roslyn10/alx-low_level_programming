@@ -31,7 +31,7 @@ int main(void)
 	}
 		z++;
 	}
-	
+
 	printf("\n");
 
 	return (0);
