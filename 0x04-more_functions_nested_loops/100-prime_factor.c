@@ -6,8 +6,9 @@
  */
 int main(void)
 {
-	long int f;
-	long int r;
+	long int num = 612852475143L;
+	long int f = num;
+	long r;
 
 	while (f % 2 == 0)
 	{
@@ -21,5 +22,7 @@ int main(void)
 			f /= r;
 		}
 	}
-	return (f);
+	printf("%ld\n", f);
+
+	return (0);
 }
