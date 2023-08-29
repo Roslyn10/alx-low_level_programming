@@ -4,7 +4,6 @@
  * _strspn - Gets the lenght of a substring
  * Description - Gets the length of a prefix substring
  * @s: Pointer to the string
- * @d: Used to keep track of s
  * @accept: Pointer to the string containing the character
  * Return: d
  */
