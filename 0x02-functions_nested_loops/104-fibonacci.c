@@ -22,7 +22,7 @@ int main(void)
 
 		if (v < 98)
 		{
-			printf(",");
+			printf(", ");
 		}
 
 		d = e;
