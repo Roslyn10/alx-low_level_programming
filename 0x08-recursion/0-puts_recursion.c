@@ -3,7 +3,6 @@
  * _puts_recursion - Prints a string
  * Description - Prints a string, followed by a new line
  * @s: Pointer
- * Return: 0 Always (Success)
  */
 void _puts_recursion(char *s)
 {
