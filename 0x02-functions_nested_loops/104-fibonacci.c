@@ -12,13 +12,13 @@ int main(void)
 	unsigned long z;
 	int v;
 
-	printf("%lu, %lu, ", d, e);
+	printf("%lu, %lu", d, e);
 
 	for (v = 3; v <= 98; v++)
 	{
 		z = d + e;
 
-		printf("%lu", z);
+		printf(", %lu", z);
 
 		if (v < 98)
 		{
