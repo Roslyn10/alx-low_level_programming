@@ -18,7 +18,7 @@ int main(void)
 	{
 		z = d + e;
 
-		printf(" %lu", z);
+		printf("%lu ", z);
 
 		if (v < 98)
 		{
