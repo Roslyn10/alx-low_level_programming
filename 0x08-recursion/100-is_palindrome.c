@@ -4,7 +4,16 @@
  * Description - Checks if a string is a palindrome or not
  * Return: 1 if it is and 0 if not
  */
-int is_palindrome_helper(char *s, int b; int e)
+int stringlength(char *s)
+{
+	if (*s == '\0')
+	{
+		return (0);
+	}
+	return (1+ stringlength(s + 1));
+}
+
+int is_palindrome_helper(char *s, int b, int e)
 {
 	if (b >= e)
 	{
@@ -16,11 +25,11 @@ int is_palindrome_helper(char *s, int b; int e)
 		return (0);
 	}
 
-	return is_palindrom_helper(s, b + e - 1);
+	return is_palindrome_helper(s, b + 1, e - 1);
 }
 
 int is_palindrome(char *s)
 {
-	int length = string_length(s);
+	int length = stringlength(s);
 	return is_palindrome_helper(s, 0, length - 1);
 }
