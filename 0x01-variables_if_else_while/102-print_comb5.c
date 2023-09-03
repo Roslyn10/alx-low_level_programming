@@ -6,36 +6,27 @@
  */
 int main(void)
 {
-	int f_digit, s_digit, t_digit, fo_digit;
+	int f, s;
 
-	for (f_digit = 0; f_digit <= 9; f_digit++)
+	for (f = 0; f < 100; f++)
 	{
-		for (s_digit = 0; s_digit <= 9; s_digit++)
+		for (s = 0; s < 100; s++)
 		{
-			for (t_digit = 0; t_digit <= 9; t_digit++)
+			if (f < s)
 			{
-				for (fo_digit = 0; fo_digit <= 9; fo_digit++)
+				putchar((f / 10) + 48);
+				putchar((s / 10) + 48);
+				putchar(' ');
+				putchar((s / 10) + 48);
+				putchar((s % 10) + 48);
+				if (f != 98 || s != 99)
 				{
-					if (f_digit * 10 + s_digit < t_digit * 10 + fo_digit)
-					{
-						putchar(f_digit + '0');
-						putchar(s_digit + '0');
-						putchar(' ');
-						putchar(t_digit + '0');
-						putchar(fo_digit + '0');
-
-						if (!(f_digit == 9 && s_digit == 8 && t_digit == 9 && fo_digit == 9))
-						{
-							putchar(',');
-							putchar(' ');
-						}
-					}
+					putchar(' ');
+					putchar(' ');
 				}
 			}
 		}
 	}
-
 	putchar('\n');
-
 	return (0);
 }
