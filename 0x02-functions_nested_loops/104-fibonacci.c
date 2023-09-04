@@ -14,7 +14,7 @@ int main(void)
 
 	printf("%lu, %lu", d, e);
 
-	whiel (1)
+	while (1)
 	{
 		z = d + e;
 
