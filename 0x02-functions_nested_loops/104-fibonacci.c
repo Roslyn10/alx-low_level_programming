@@ -14,11 +14,14 @@ int main(void)
 
 	printf("%lu, %lu", d, e);
 
-	for (v = 3; v <= 117; v++)
+	whiel (1)
 	{
 		z = d + e;
 
-		printf(", %lu", z);
+		if (z > 7963007762452793327ULL)
+			break;
+
+		printf(", %llu", z);
 
 		d = e;
 		e = z;
