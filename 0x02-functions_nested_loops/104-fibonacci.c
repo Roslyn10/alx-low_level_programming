@@ -18,12 +18,7 @@ int main(void)
 	{
 		z = d + e;
 
-		printf(" %lu", z);
-
-		if (v < 98)
-		{
-			printf(", ");
-		}
+		printf(", %lu", z);
 
 		d = e;
 		e = z;
