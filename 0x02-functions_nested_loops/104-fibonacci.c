@@ -14,7 +14,7 @@ int main(void)
 
 	printf("%lu, %lu", d, e);
 
-	for (v = 3; v <= 98; v++)
+	for (v = 3; v <= 117; v++)
 	{
 		z = d + e;
 
