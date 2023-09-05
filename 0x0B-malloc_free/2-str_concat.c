@@ -3,8 +3,8 @@
 /**
  * *str_concat - Concatenates two strings
  * Description - Combines two strings
- * @st1: First given string
- * @str2: Second given string
+ * @s1: First given string
+ * @s2: Second given string
  * Return: NULL on failure
  */
 char *str_concat(char *s1, char *s2)
@@ -26,7 +26,7 @@ char *str_concat(char *s1, char *s2)
 	{
 		f++;
 	}
-	while (s2[h]!='\0')
+	while (s2[h] != '\0')
 	{
 		h++;
 	}
