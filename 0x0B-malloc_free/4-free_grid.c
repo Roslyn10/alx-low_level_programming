@@ -1,10 +1,20 @@
 #include <stdio.h>
 #include "main.h"
+#include <stdlib.h>
 /**
- * *argstostr - Concatenates all the arguments of the program
- * Description - Combines allthe arguments of the program
- * Return: NULL if ac == 0 or av == NULL or if it fails
- * ... returns a pointer to a new string
+ * free_grid - Frees 2d grid previously created in alloc_grid
+ * Description - Frees 2D grid previously created in alloc_grid
+ * @grid: Given array
+ * @height: Height of 2D grid
  */
-char *argstostr(int ac, char **av)
+void free_grid(int **grid, int height)
 {
+	int g;
+
+	for (g = 0; g < height; g++)
+	{
+		free(grid[g]);
+	}
+
+	free(grid);
+}
