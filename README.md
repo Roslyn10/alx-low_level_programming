@@ -8,3 +8,7 @@ First C repository
 0x05-pointers_arrrays-strings
 0x06-pointers_arrays_strings
 0x07-pointers_arrays_strings
+0x08. C - Recursion
+0x09-static_libraries
+0x0A. C - argc, argv
+0x0B. C - malloc, free
