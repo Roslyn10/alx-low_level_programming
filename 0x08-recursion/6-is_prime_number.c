@@ -1,28 +1,5 @@
 #include "main.h"
 /**
- * is_prime_number - Checks if an integer is a prime number
- * Description - Chaecks if an integer is a prime number or not
- * @n: Given integer
- * Return: 1 if it is and 0 if not
- */
-int is_prime_number(int n)
-{
-	int v;
-
-	if (v * v > n)
-	{
-		return (1);
-	}
-
-	if (n % v == 0)
-	{
-		return (0);
-	}
-
-	return (is_prime_number(n, v + 1));
-}
-
-/**
  * is_prime_helper - Checks whether an integer is a prime numebr or not
  * Description - Checks whethera given integer is a prime number or not
  * @n: Given integer
@@ -35,5 +12,28 @@ int is_prime_helper(int n)
 		return (0);
 	}
 
-	return (is_prime_helper(n, 2));
+	return (2);
+}
+
+/**
+ * is_prime_number - Checks if an integer is a prime number
+ * Description - Chaecks if an integer is a prime number or not
+ * @n: Given integer
+ * Return: 1 if it is and 0 if not
+ */
+int is_prime_number(int n)
+{
+	int v = 1;
+
+	if (v * v > n)
+	{
+		return (1);
+	}
+
+	if (n % v == 0)
+	{
+		return (0);
+	}
+
+	return (v + 1);
 }

@@ -1,7 +1,10 @@
 #include "main.h"
 /**
  * _sqrt_helper - Recursion function
- * Description - Helps function _sqrt_recusrion
+int _sqrt_recursion(int n)
+{
+        return (_sqrt_helper(n, 0));
+} * Description - Helps function _sqrt_recusrion
  * Description - Returns the natural root of a number
  * @n: Given number
  * @g: Placeholder
