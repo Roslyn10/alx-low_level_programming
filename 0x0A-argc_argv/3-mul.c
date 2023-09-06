@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 	int t;
 	int total;
 
-	if (argc != 3 && argc < 2)
+	if (argc != 3)
 	{
 		printf("Error\n");
 
