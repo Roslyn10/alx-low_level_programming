@@ -12,7 +12,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int cents;
+	long cents;
 	int coins25;
 	int coins10;
 	int coins5;
@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	cents = atoi(argv[1]);
+	cents = atol(argv[1]);
 
 	if (cents < 0)
 	{
