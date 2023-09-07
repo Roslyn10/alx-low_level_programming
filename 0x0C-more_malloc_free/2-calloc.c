@@ -12,9 +12,9 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	int z;
+	unsigned int z;
 	char *k;
-	int t;
+	unsigned int t;
 
 	if (nmemb == 0 || size == 0)
 	{
@@ -30,7 +30,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 	}
 
-	for (z = 0; z < t; t++)
+	for (z = 0; z < t; z++)
 	{
 		k[z] = 0;
 	}
