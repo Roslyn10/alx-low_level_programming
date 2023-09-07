@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
 	cents %= 2;
 	coins1 = cents;
 
-	total = coins25 + coins10 + coins5 + coins2 + coins1;;
+	total = coins25 + coins10 + coins5 + coins2 + coins1;
 
 	printf("%d\n", total);
 
