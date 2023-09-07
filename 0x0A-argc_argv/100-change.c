@@ -16,6 +16,7 @@ int main(int argc, char *argv[])
 	int coins25;
 	int coins10;
 	int coins5;
+	int coins2;
 	int coins1;
 	int total;
 
@@ -39,9 +40,11 @@ int main(int argc, char *argv[])
 	cents %= 10;
 	coins5 = cents / 5;
 	cents %= 5;
+	coins2 = cents / 2;
+	cents %= 2;
 	coins1 = cents;
 
-	total = coins25 + coins10 + coins5 + coins1;
+	total = coins25 + coins10 + coins5 + coins2 + coins1;;
 
 	printf("%d\n", total);
 
