@@ -1,18 +1,16 @@
 #include <stdio.h>
-#include <string.h>
 #include "main.h"
 /**
  * *str_concat - Concatenates two strings
  * Description - Combines two strings
- * @s1: First given string
- * @s2: Second given string
+ * @st1: First given string
+ * @str2: Second given string
  * Return: NULL on failure
  */
 char *str_concat(char *s1, char *s2)
 {
-	int f, h;
 	char *r;
-	int t;
+	int f, h;
 
 	if (s1 == NULL)
 	{
@@ -23,18 +21,21 @@ char *str_concat(char *s1, char *s2)
 		s2 = "";
 	}
 
-	f = strlen(s1);
-	h = strlen(s2);
-	t = f + h + 1;
+	f = 0;
+	while (s1[f] != '\0')
+	{
+		f++;
+	}
 
-	r = (char *)malloc(t);
+	h = 0;
+	while (s2[h] != '\0')
+	{
+		h++;
+	}
 
+	*r = (char *)malloc(f + h +1);
 	if (r == NULL)
 	{
 		return (NULL);
 	}
-
-	strcpy(r, s1);
-	strcat(r, s2);
-	return (r);
 }

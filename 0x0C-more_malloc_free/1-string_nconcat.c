@@ -1,6 +1,6 @@
 #include <stdio.h>
+#include"main.h"
 #include <string.h>
-#include "main.h"
 #include <stdlib.h>
 
 /**
@@ -13,35 +13,38 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
+	unsigned int s1l;
+	unsigned int s2l;
+	unsigned int t;
 	char *r;
-	unsigned int f = 0, h = 0;
 
 	if (s1 == NULL)
 	{
-		s1 = "";
+		s1 = " ";
 	}
 	if (s2 == NULL)
 	{
-		s2 = "";
+		s2 = " ";
 	}
 
-	while (s1[f] != '\0')
+	s1l = strlen(s1);
+	s2l = strlen(s2);
+
+	if (n >= s2l)
 	{
-		f++;
-	}
-	while (s2[h] != '\0' && h < n)
-	{
-		h++;
+		n = s2l;
 	}
 
-	r = (char *)malloc(f + h + 1);
+	t = s1l + n;
+	r = (char *)malloc(t + 1);
+
 	if (r == NULL)
 	{
 		return (NULL);
 	}
 
 	strcpy(r, s1);
-	strncat(r, s2, h);
+	strncat(r, s2, n);
 
 	return (r);
 }
