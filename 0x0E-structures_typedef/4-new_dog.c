@@ -5,7 +5,7 @@
 
 /**
  * *new_dog - Creates a new dog
- * Description - Another poochie 
+ * Description - Another poochie
  * @name: New dog's name
  * @age: New dog's age
  * @owner: New dog's owner
@@ -13,33 +13,31 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *newdog(char *name, float age, char *owner)
+	dog_t *newdog = (dog_t *)malloc(sizeof(dog_t));
+
+	if (newdog == NULL)
+		{
+			return (NULL);
+		}
+
+	newdog->name = (char *)malloc(strlen(name) + 1);
+	if (newdog->name == NULL)
 	{
-		newdog = (dog_t *)malloc(sizeof(dog_t));
-
-		if (newdog  == NULL)
-		{
-			return (NULL);
-		}
-
-		newdog->name = (char *)malloc(strlen(name) + 1);
-		if (newdog->name == NULL)
-		{
-			return (NULL);
-		}
-
-		strcpy(newdog->name, name);
-
-		newdog-> = (char *)malloc(strlen(owner) + 1);
-		if (newdog->owner == NULL)
-		{
-			return (NULL);
-		}
+		free(newdog);
+		return (NULL);
 	}
+	strcpy(newdog->name, name);
 
-		strcpy(newdog->owner, owner);
+	newdog->owner = (char *)malloc(strlen(owner) + 1);
+	if (newdog->owner == NULL)
+	{
+		free(newdog->name);
+		free(newdog);
+		return (NULL);
+	}
+	strcpy(newdog->owner, owner);
 
-		newdog->age = age;
+	newdog->age = age;
 
-		return (newdog);
+	return (newdog);
 }
