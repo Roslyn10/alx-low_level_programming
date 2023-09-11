@@ -1,3 +1,6 @@
+#ifdef DOG_H
+#define DOG_H
+
 #include <stdio.h>
 
 /**
@@ -12,3 +15,5 @@ struct dog
 	double age;
 	char *owner;
 };
+
+#endif
