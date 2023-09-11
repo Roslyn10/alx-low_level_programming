@@ -1,7 +1,11 @@
+#ifndef DOG_H
+#define DOG_H
+
 /**
- * my_dog.name - Assiges a name to the dog
- * my_dog.age - Assigns an age to the dog
- * my_do.owner - Assigns an owner to the dog
+ * struct dog - Basic info of a dog
+ * @name: Assiges a name to the dog
+ * @age: Assigns an age to the dog
+ * @owner: Assigns an owner to the dog
  */
 
 struct dog
@@ -10,3 +14,10 @@ struct dog
 	double age;
 	char *owner;
 };
+
+void init_dog(struct dog *d, char *name, float age, char *owner);
+void print_dog(struct dog *d);
+dog_t *new_dog(char *name, float age, char *owner);
+void free_dog(dog_t *d);
+
+#endif
