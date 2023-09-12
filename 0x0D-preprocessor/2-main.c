@@ -2,7 +2,7 @@
 
 /**
  * main - Prints the name of the file it was compiled form
- * Description - Prints the name of the file it was compiled followed by a new line
+ * Description - Prints the name of the file it was compiled followed by \n
  * Return: 0 Always (Success)
  */
 int main(void)
