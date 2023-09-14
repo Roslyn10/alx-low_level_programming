@@ -43,6 +43,8 @@ int main(int argc, char *argv[])
 	}
 
 	n_b = atoi(argv[1]);
+
+	if (n_b < 0)
 	{
 		printf("Error\n");
 		return (1);
