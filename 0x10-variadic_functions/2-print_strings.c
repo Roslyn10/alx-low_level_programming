@@ -15,7 +15,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	unsigned int h;
 	const char *st;
 
-	va_star(ar, n);
+	va_start(ar, n);
 
 	for (h = 0; h < n; h++)
 	{
@@ -32,7 +32,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 		if (h < n - 1 && separator != NULL)
 		{
-			printf("%s", sperator);
+			printf("%s", separator);
 		}
 	}
 
