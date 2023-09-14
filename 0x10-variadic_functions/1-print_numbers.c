@@ -6,7 +6,7 @@
 /**
  * print_numbers - Prints numbers
  * Description - A function that prints numbers, followed by a new line
- * separator: Given string
+ * @separator: Given string
  * @n: Parameters passed
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
