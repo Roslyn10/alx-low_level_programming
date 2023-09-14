@@ -10,7 +10,7 @@
  * Return: 0 Always (Success)
  */
 
-int main(int __attribute__((__unused__)) argc, char *argv[])int ma
+int main(int argc, char *argv[])
 {
 	int num1, num2;
 	char *op;
