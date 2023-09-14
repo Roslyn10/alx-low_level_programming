@@ -13,7 +13,7 @@ void print_opcodes(unsigned char *start, size_t size)
 
 	for (n = 0; n < size; n++)
 	{
-		printf("%02x", (unsigned int)start[n]);
+		printf("%02hhx", (unsigned int)start[n]);
 		if (n < size - 1)
 		{
 			printf(" ");
@@ -55,7 +55,7 @@ int main(int argc, char *argv[])
 	start = (unsigned char *)&main;
 	for (f = 0; f < r_s; f++)
 	{
-		printf("%02x", (unsigned int)start[f]);
+		printf("%02hhx", (unsigned int)start[f]);
 		if (f < r_s - 1)
 		{
 			printf(" ");
