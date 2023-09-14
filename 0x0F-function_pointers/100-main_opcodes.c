@@ -39,13 +39,13 @@ int main(int argc, char *argv[])
 	if (argc != 2)
 	{
 		printf("Error\n");
-		return (1);
+		return (2);
 	}
 
 	n_b = atoi(argv[1]);
 	{
-		printf("Rrroe\n");
-		return (2);
+		printf("Error\n");
+		return (1);
 	}
 
 	r_s = (size_t)n_b;
