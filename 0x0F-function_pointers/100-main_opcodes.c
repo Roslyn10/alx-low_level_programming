@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdio.h>
+#include <stdlib.h>
 /**
  * print_opcodes - Prints the opcodes of its own main function
  * @size: Number of bytes to be read
@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
 	if (argc != 2)
 	{
 		printf("Error\n");
-		return (2);
+		exit(1);
 	}
 
 	n_b = atoi(argv[1]);
@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
 	if (n_b < 0)
 	{
 		printf("Error\n");
-		return (1);
+		exit(2);
 	}
 
 	r_s = (size_t)n_b;
