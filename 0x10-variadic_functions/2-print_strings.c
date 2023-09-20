@@ -24,15 +24,24 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		if (st != NULL)
 		{
 			printf("%s", st);
-		}
-		else
-		{
-			printf("nil)");
-		}
 
-		if (h < n - 1 && separator != NULL && st != NULL)
+			if (h < n - 1 && separator != NULL)
+			{
+				printf("%s", separator);
+			}
+		}
+		else 
 		{
-			printf("%s", separator);
+			printf("nil");
+
+			if (h < n -1 && separator != NULL)
+			{
+				st = va_arg(ar, const char *);
+				if (st != NULL)
+				{
+					printf("%s", separator);
+				}
+			}
 		}
 	}
 
