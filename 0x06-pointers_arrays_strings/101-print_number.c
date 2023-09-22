@@ -6,9 +6,7 @@
  */
 void print_number(int n)
 {
-	unsigned int d;
-
-	d = n;
+	unsigned int d = (n < 0) ? -n : n;
 
 	if  (n < 0)
 	{
@@ -16,15 +14,15 @@ void print_number(int n)
 		n = -n;
 	}
 
-	if (n == 0)
+	if (d == 0)
 	{
 		_putchar('0');
 		return;
 	}
 
-	else if (n / 10 != 0)
+	else if (d / 10 != 0)
 	{
-		print_number(n / 10);
+		print_number(d / 10);
 	}
-	_putchar((n % 10) + '0');
+	_putchar((d % 10) + '0');
 }
