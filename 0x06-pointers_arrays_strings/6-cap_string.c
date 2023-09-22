@@ -12,10 +12,10 @@ char *cap_string(char *cap)
 
 	while (cap[e])
 	{
-		while (!(cap[e] >= 'A' && cap[e] <= 'Z'))
-			e++;
-
-		if (cap[e - 1] == ' ' ||
+		if (cap[e] >= 'a' && cap[e] <= 'z')
+		{
+			if (e == 0 ||
+				cap[e - 1] == ' ' ||
 				cap[e - 1] == '\t' ||
 				cap[e - 1] == '\n' ||
 				cap[e - 1] == ',' ||
@@ -29,10 +29,13 @@ char *cap_string(char *cap)
 				cap[e - 1] == '{' ||
 				cap[e - 1] == '}' ||
 				cap[e - 1] == 0)
-		{
-			cap[e] -= 32;
+
+			{
+				cap[e] -= 32;
+			}
 		}
 		e++;
 	}
+
 	return (cap);
 }
