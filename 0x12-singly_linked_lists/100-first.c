@@ -4,8 +4,8 @@
 void first_message(void) __attribute__((constructor));
 
 /**
- * first_message - 
- * Description- 
+ * first_message - Prints a message before the main function
+ * Description- Prints a message before main() function
  * REturn: Nothing
  */
 

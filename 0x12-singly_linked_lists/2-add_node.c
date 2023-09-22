@@ -5,10 +5,10 @@
 
 /**
  * *add_node - A function that adds a new node at the beginning of  list_t list
- * Description - Adds a new node at the beginnig of a list_t list 
- * @head:
- * @str:
- * Return:
+ * Description - Adds a new node at the beginnig of a list_t list
+ * @head: DOuble pointer
+ * @str: Given string
+ * Return: New node
  */
 
 list_t *add_node(list_t **head, const char *str)
@@ -26,7 +26,7 @@ list_t *add_node(list_t **head, const char *str)
 	}
 
 	nd->next = *head;
-	
+
 	*head = nd;
 
 	return (nd);

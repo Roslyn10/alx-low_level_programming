@@ -4,11 +4,11 @@
 #include "lists.h"
 
 /**
- * add_node_end - 
- * DEscription- 
- * @head:
- * @str:
- * Return:
+ * add_node_end - A function that adds a new node at the end of a list_t list
+ * DEscription- Adds a new node at the end of a list_t list
+ * @head: Double poiner
+ * @str: Given string
+ * Return: Address of the new node or NULL if failed
  */
 
 list_t *add_node_end(list_t **head, const char *str)
