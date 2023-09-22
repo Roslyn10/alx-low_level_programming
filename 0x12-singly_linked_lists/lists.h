@@ -1,5 +1,5 @@
 #ifndef LISTS_H
-#define LSTS_H
+#define LISTS_H
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -17,7 +17,7 @@ typedef struct list_s
 	char *str;
 	unsigned int len;
 	struct list_s *next;
-}list_t;
+} list_t;
 
 int _putchar(char c);
 
@@ -29,4 +29,4 @@ void free_list(list_t *head);
 void first_message(void);
 
 
-#endif
+#endif /* LISTS_H
