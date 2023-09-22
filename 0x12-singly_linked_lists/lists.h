@@ -29,4 +29,4 @@ void free_list(list_t *head);
 void first_message(void);
 
 
-#endif /* LISTS_H
+#endif /* LISTS_H */
