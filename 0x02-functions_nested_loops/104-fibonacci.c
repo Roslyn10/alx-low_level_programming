@@ -7,23 +7,38 @@
  */
 int main(void)
 {
-	unsigned long d = 1;
-	unsigned long e = 2;
-	unsigned long z;
-	int v;
+	unsigned long int q;
+	unsigned long int d = 1;
+	unsigned long int z = 2;
+	unsigned long int k = 1000000000;
+	unsigned long int e;
+	unsigned long int f;
+	unsigned long int g;
+	unsigned long int h;
 
-	printf("%lu, %lu", d, e);
+	printf("%lu", d);
 
-	for(v = 3; v <= 98; v++)
+	for (q = 1; q < 91; q++)
 	{
-		z = d + e;
-		d = e;
-		e = z;
-
-		printf(", %lu", e);
+		printf(", %lu", z);
+		z += d;
+		d = z - d;
 	}
 
-	printf("\n");
+	e = (d / k);
+	f = (d % k);
+	g = (z / k);
+	h = (z % k);
 
+	for (q = 92; q < 99; ++q)
+	{
+		printf(", %lu", g + (h / k));
+		printf("%lu", h % k);
+		g = g + e;
+		e = g - e;
+		h = h + f;
+		f = h - f;
+	}
+	printf("\n");
 	return (0);
 }
