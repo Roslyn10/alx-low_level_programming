@@ -43,11 +43,7 @@ void print_times_tables(int n)
 					_putchar((t / 10) + '0');
 					_putchar((t % 10) + '0');
 				}
-			}int _putchar(char c)
-{
-        return (write(1, &c, 1));
-}
+			}
 		}
-		_putchar('\n');
 	}
 }
