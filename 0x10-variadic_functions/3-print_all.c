@@ -11,7 +11,7 @@
 void print_all(const char * const format, ...)
 {
 	int p = 0;
-	char *s = " ";
+	char *s = "";
 	char *st;
 	va_list args;
 
