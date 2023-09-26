@@ -6,7 +6,7 @@
 /**
  * positive_intger - Checks if the given int is positive
  * Description - Checks if the given integer is positive
- * @str: 
+ * @str: Given string
  * Return: 1
  */
 
@@ -26,9 +26,9 @@ int positive_integer(const char *str)
 /**
  * main - Multiplies two positive numbers
  * Description - Multiplies two positive numbers
- * @argc:
- * @argv:
- * Return:
+ * @argc: Argument count
+ * @argv: Argument vector
+ * Return: 98 or Error upon error or, 0 if success
  */
 
 int main(int argc, char *argv[])
@@ -41,6 +41,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
+		printf("Error\n");
 		return (98);
 	}
 
@@ -49,11 +50,12 @@ int main(int argc, char *argv[])
 
 	if (!positive_integer(num1) || !positive_integer(num2))
 	{
+		printf("Error\n");
 		return (98);
 	}
 
-	n1 = atoi(num1);
-	n2 = atoi(num2);
+	n1 = atol(num1);
+	n2 = atol(num2);
 
 	total = n1 * n2;
 	printf("%ld\n", total);
