@@ -41,6 +41,5 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	c_s = (size_t)((old_size < new_size) ? old_size : new_size);
 	memcpy(n_p, ptr, c_s);
 
-	free(ptr);
 	return (n_p);
 }
