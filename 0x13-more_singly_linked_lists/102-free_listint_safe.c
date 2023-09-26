@@ -5,7 +5,7 @@
 /**
  * free_listint_safe - A function that fres a list
  * Description - Frees a listint_t list
- * @h:
+ * @h: Pointer to head of list
  * Return: the size of the list that was free'd
  */
 
@@ -21,7 +21,7 @@ size_t free_listint_safe(listint_t **h)
 
 		free(f);
 		a++;
-		
+
 		f = n_n;
 	}
 
