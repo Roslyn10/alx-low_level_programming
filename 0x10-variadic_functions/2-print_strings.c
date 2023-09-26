@@ -30,11 +30,11 @@ void print_strings(const char *separator, const unsigned int n, ...)
 				printf("%s", separator);
 			}
 		}
-		else 
+		else
 		{
 			printf("(nil)");
 
-			if (h < n -1 && separator != NULL)
+			if (h < n - 1 && separator != NULL)
 			{
 				st = va_arg(ar, const char *);
 				if (st != NULL)
