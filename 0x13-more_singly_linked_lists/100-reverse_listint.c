@@ -11,35 +11,18 @@
 
 listint_t *reverse_listint(listint_t **head)
 {
-	listint_t *p = NULL; /**Previous node**/
-	listint_t *c = *head; /**Current node**/
-	listint_t *n_n; /**New node**/
+	listint_t *p = NULL;
+	listint_t *cur = *head;
+	listint_t *n_n = NULL;
 
-	while (c != NULL)
+	while (cur != NULL)
 	{
-		n_n = c->next;
-		c->next = p;
-		c = n_n;
+		n_n = cur->next;
+		cur->next = p;
+		p = cur;
+		cur = n_n;
 	}
 
 	*head = p;
 	return (*head);
-}
-
-/**
- * print_reverse - A function that prints a list in reverse
- * Description - Prints a list in revers
- * @head: Pointer to head of list
- * Return: Nothing
- */
-
-void print_reverse(listint_t *head)
-{
-	listint_t *cur = head;
-	
-	while (cur != NULL)
-	{
-		printf("%d", cur->n);
-		cur = cur->next;
-	}
 }
