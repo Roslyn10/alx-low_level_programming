@@ -32,13 +32,12 @@ size_t print_listint_safe(const listint_t *head)
 				break;
 			}
 		}
-
 		if (h == c_l)
 		{
 			exit(98);
 		}
-
-		printf("[]%d\n", h->n);
+		
+		printf("[%p] %ld\n", (void*)h, g);
 	}
 
 	return (g);
