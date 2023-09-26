@@ -24,25 +24,25 @@ void print_all(const char * const format, ...)
 			switch (format[p])
 			{
 				case 'c':
-					printf("%s%c ", s, va_arg(args, int));
+					printf("%s%c", s, va_arg(args, int));
 					break;
 				case 'f':
-					printf("%s%f ", s, va_arg(args, double));
+					printf("%s%f", s, va_arg(args, double));
 					break;
 				case 'i':
-					printf("%s%d ", s, va_arg(args, int));
+					printf("%s%d", s, va_arg(args, int));
 					break;
 				case 's':
 					st = va_arg(args, char*);
 					if (st == NULL)
 					st = "(nil)";
-					printf("%s%s ", s, st);
+					printf("%s%s", s, st);
 					break;
 				default:
 					p++;
 					continue;
 			}
-			s = ",";
+			s = ", ";
 			p++;
 		}
 	}
