@@ -10,39 +10,39 @@
  */
 char *argstostr(int ac, char **av)
 {
-	int t_l, d, g = 0, p = 0;
+	int t_l = 0;
+	int a_i, c_i, s_i = 0;
 	char *r;
 
 	if (ac == 0 || av == NULL)
 	{
 		return (NULL);
 	}
-	
-	for (t_l = 0; t_l < ac; t_l++)
-	{
-		for (d = 0; av[t_l][d]; d++)
-			g++;
-	}
-	p += ac;
 
-	r = malloc(sizeof(char) * (g + ac + 1));
+	for (a_i = 0; a_i < ac; a_i++)
+	{
+		for (c_i = 0; av[a_i][c_i]; c_i++)
+		{
+			t_l++;
+		}
+		t_l++;
+	}
+
+	r = (char *)malloc(t_l + 1);
 	if (r == NULL)
 	{
 		return (NULL);
 	}
-	for (t_l = 0; t_l < ac; t_l++)
+
+	for (a_i = 0; a_i < ac; a_i++)
 	{
-		for (d = 0; av[t_l][d]; d++)
+		for (c_i = 0; av[a_i][c_i]; c_i++)
 		{
-			r[g - ac] = av[t_l][d];
-			g++;
+			r[s_i++] = av[a_i][c_i];
 		}
-		if (t_l < ac - 1)
-		{
-			r[g - ac] = '\n';
-			g++;
-		}
+		r[s_i++] = '\n';
 	}
-	r[g -ac] = '\0';
+
+	r[s_i] = '\0';
 	return (r);
 }
