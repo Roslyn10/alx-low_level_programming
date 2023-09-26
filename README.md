@@ -17,3 +17,5 @@ First C repository
 0x0D-preprocessor
 0x0F-function_pointers
 0x10. C - Variadic functions
+0x12. C - Singly linked lists
+0x13-more_singly_linked_lists
