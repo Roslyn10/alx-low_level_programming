@@ -11,3 +11,20 @@
 
 size_t free_listint_safe(listint_t **h)
 {
+	listint_t *f = *h; /**traverses the list**/
+	size_t a = 0; /**keeps track of size**/
+	listint_t *n_n; /**next node**/
+
+	while (f != NULL)
+	{
+		n_n = f->next;
+
+		free(f);
+		a++;
+		
+		f = n_n;
+	}
+
+	*h = NULL;
+	return (a);
+}
