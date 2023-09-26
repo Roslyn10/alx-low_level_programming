@@ -6,7 +6,7 @@
  * *find_listint_loop - A function that finds the loop in a list
  * Description Finds the loop in a linked list
  * @head: Pointer to head of linked list
- * Returns: the address of the node where the loop starts,
+ * Return: the address of the node where the loop starts,
  * or NULL if there is not loop
  */
 
@@ -23,7 +23,7 @@ listint_t *find_listint_loop(listint_t *head)
 	k = head;
 	j = head;
 
-	while(k != NULL && k->next != NULL)
+	while (k != NULL && k->next != NULL)
 	{
 		j = j->next;
 		k = k->next->next;
