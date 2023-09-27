@@ -60,7 +60,7 @@ int main(int argc, char *argv[])
 	if ((n1 == 0 && *num1 != '0') || (n2 == 0 && *num2 != '0'))
 	{
 		printf("Error\n");
-		exit (98);
+		exit(98);
 	}
 
 	total = n1 * n2;
