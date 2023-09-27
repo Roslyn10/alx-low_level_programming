@@ -4,7 +4,7 @@
 #include <ctype.h>
 
 /**
- * positive_intger - Checks if the given int is positive
+ * positive_integer - Checks if the given int is positive
  * Description - Checks if the given integer is positive
  * @str: Given string
  * Return: 1
