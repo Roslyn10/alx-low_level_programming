@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
 	if (argc != 3)
 	{
 		printf("Error\n");
-		return (98);
+		exit(98);
 	}
 
 	num1 = argv[1];
@@ -51,11 +51,17 @@ int main(int argc, char *argv[])
 	if (!positive_integer(num1) || !positive_integer(num2))
 	{
 		printf("Error\n");
-		return (98);
+		exit(98);
 	}
 
 	n1 = atol(num1);
 	n2 = atol(num2);
+
+	if ((n1 == 0 && *num1 != '0') || (n2 == 0 && *num2 != '0'))
+	{
+		printf("Error\n");
+		exit (98);
+	}
 
 	total = n1 * n2;
 	printf("%ld\n", total);
