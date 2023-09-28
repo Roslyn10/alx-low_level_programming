@@ -26,11 +26,11 @@ unsigned int binary_to_uint(const char *b)
 
 	for (d = 0; d < l; d++)
 	{
-		if (b[d] == '0') /**Checks if it is 0 or 1**/
+		if (b[d] == '0') /**Checks if it is 0**/
 		{
 			binary <<= 1; /**Makes space for binary int**/
 		}
-		else if (b[d] == '1')
+		else if (b[d] == '1') /**Checks if it is 1**/
 		{
 			binary <<= 1;
 			binary |= 1; /**Adds binary int from tight position**/

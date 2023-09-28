@@ -10,13 +10,19 @@
 
 void print_binary(unsigned long int n)
 {
-	int s;
+	unsigned int s;
 	int b;
-	int m = sizeof(unsigned int) * 1;
+	int m = sizeof(unsigned long int) * 2;
 
-	for (s = m - 1; s >= 0; s--)
+	if (n == 0)
 	{
-		b = (n >> s) & 1;
+		_putchar('0');
+		return;
+	}
+
+	for (s = m - 1; s > 0; s--)
+	{
+		b = (n >> (s - 1)) & 1;
 		_putchar(b + '0');
 	}
 }
