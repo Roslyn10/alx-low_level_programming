@@ -32,7 +32,7 @@ unsigned int binary_to_uint(const char *b)
 		}
 		else if (b[d] == '1') /**Checks if it is 1**/
 		{
-			binary <<=1;
+			binary <<= 1;
 			binary |= 1;
 		}
 		else
