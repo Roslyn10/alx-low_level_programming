@@ -32,8 +32,8 @@ unsigned int binary_to_uint(const char *b)
 		}
 		else if (b[d] == '1') /**Checks if it is 1**/
 		{
-			binary <<= 1;
-			binary |= 1; /**Adds binary int from tight position**/
+			binary <<=1;
+			binary |= 1;
 		}
 		else
 		{
@@ -43,4 +43,3 @@ unsigned int binary_to_uint(const char *b)
 
 	return (binary);
 }
-
