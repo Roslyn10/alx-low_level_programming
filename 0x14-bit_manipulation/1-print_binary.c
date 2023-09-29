@@ -21,11 +21,11 @@ void print_binary(unsigned long int n)
 		return;
 	}
 
-	n_m = sizeof(unsigned long int) * 8;
+	n_m = sizeof(unsigned long int) * 7;
 
 	for (s = n_m - 1; s > 0; s--)
 	{
-		b = (n >> (s - 1)) & 1;
+		b = (n >> s) & 1;
 
 		if (b == 1)
 		{
