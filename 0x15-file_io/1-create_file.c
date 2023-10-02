@@ -8,8 +8,8 @@
 /**
  * create_file - Creates a file
  * Description - A function that creates a file
- * @filename:
- * @text_cotent:
+ * @filename: Pointer to a character arraythat represents the name of the file
+ * @text_content: Pointer to the first character of a null-terminating string
  * Return: 1 on success, -1 on failure and when filename is NULL
  */
 
