@@ -19,44 +19,35 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	size_t bread;
 	ssize_t bwritten;
 
-
-	if (filename == NULL)
+	if (!filename)
 	{
 		return (0);
 	}
-
 	file = fopen(filename, "r");
-	if (file == NULL)
+	if (!file)
 	{
 		return (0);
 	}
-
-	buffer = (char *)malloc(sizeof(char) * (letters + 1));
-	if (buffer == NULL)
+	buffer = (char *)malloc(letters + 1);
+	if (!buffer)
 	{
 		fclose(file);
 		return (0);
 	}
-
-	bread = fread(buffer, sizeof(char), letters, file);
-	if (bread == 0 || bread == (size_t)-1)
+	bread = fread(buffer, 1, letters, file);
+	fclose(file);
+	if (bread <= 0)
 	{
-		fclose(file);
 		free(buffer);
 		return (0);
 	}
-
 	buffer[bread] = '\0';
-
 	bwritten = write(fileno(stdout), buffer, bread);
+
+	free(buffer);
 	if (bwritten < 0 || (size_t)bwritten != bread)
 	{
-		fclose(file);
-		free(buffer);
 		return (0);
 	}
-
-	fclose(file);
-	free(buffer);
 	return (bread);
 }
