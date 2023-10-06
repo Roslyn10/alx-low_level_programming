@@ -36,7 +36,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 	bread = fread(buffer, 1, letters, file);
 	fclose(file);
-	if (bread == 0)
+	if (bread <= 0)
 	{
 		free(buffer);
 		return (0);
