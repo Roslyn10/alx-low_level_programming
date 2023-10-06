@@ -44,7 +44,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	buffer[bread] = '\0';
 	fclose(file);
 
-	bwritten = write(fileno(stdout), buffer, bread);
+	bwritten = write(STDOUT_FILENO, buffer, bread);
 
 	free(buffer);
 	if (bwritten < 0 || (size_t)bwritten != bread)
