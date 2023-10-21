@@ -21,25 +21,25 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	if (!filename)
 	{
-		return (0);
+		return (-1);
 	}
 	file = fopen(filename, "r");
 	if (!file)
 	{
-		return (0);
+		return (-1);
 	}
 	buffer = (char *)malloc(letters + 1);
 	if (!buffer)
 	{
 		fclose(file);
-		return (0);
+		return (-1);
 	}
 	bread = fread(buffer, 1, letters, file);
 	fclose(file);
 	if (bread <= 0)
 	{
 		free(buffer);
-		return (0);
+		return (-1);
 	}
 	buffer[bread] = '\0';
 	fclose(file);
@@ -49,7 +49,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	free(buffer);
 	if (bwritten < 0 || (size_t)bwritten != bread)
 	{
-		return (0);
+		return (-1);
 	}
 	return (bread);
 }
