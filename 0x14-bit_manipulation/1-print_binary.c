@@ -24,9 +24,9 @@ void print_binary(unsigned long int n)
 
 	for (s = n_m - 1; s > 0; s--)
 	{
-		b = (n >> (s -1)) & 1;
+		b = (n >> (s - 1)) & 1;
 
-		if ( b == 1)
+		if (b == 1)
 		{
 			m = 1;
 		}
