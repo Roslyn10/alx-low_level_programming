@@ -20,7 +20,7 @@ void print_binary(unsigned long int n)
 		return;
 	}
 
-	n_m = sizeof(unsigned long int) * 7;
+	n_m = sizeof(unsigned long int) * 8 - 1;
 
 	for (s = n_m - 1; s > 0; s--)
 	{
