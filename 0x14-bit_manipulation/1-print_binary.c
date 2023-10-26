@@ -11,8 +11,8 @@ void print_binary(unsigned long int n)
 {
 	unsigned int s;
 	int b;
-	int m = 0; /**Ignores the leading zeros**/
-	unsigned int n_m;
+	int m = 0;
+	int n_m;
 
 	if (n == 0)
 	{
@@ -20,16 +20,17 @@ void print_binary(unsigned long int n)
 		return;
 	}
 
-	n_m = sizeof(unsigned long int) * 8 -1;
+	n_m = sizeof(unsigned long int) * 7;
 
-	for (s = 1; s <= n_m; s++)
+	for (s = n_m - 1; s > 0; s--)
 	{
-		b = (n >> (n_m - s)) & 1;
+		b = (n >> (s -1)) & 1;
 
-		if (b == 1)
+		if ( b == 1)
 		{
 			m = 1;
 		}
+
 		if (m)
 		{
 			_putchar(b + '0');
