@@ -12,7 +12,7 @@ void print_binary(unsigned long int n)
 	unsigned int s;
 	int b;
 	int m = 0; /**Ignores the leading zeros**/
-	int n_m;
+	unsigned int n_m;
 
 	if (n == 0)
 	{
@@ -20,11 +20,11 @@ void print_binary(unsigned long int n)
 		return;
 	}
 
-	n_m = sizeof(unsigned long int) * 7;
+	n_m = sizeof(unsigned long int) * 8 -1;
 
-	for (s = n_m - 1; s > 0; s--)
+	for (s = 1; s <= n_m; s++)
 	{
-		b = (n >> (s - 1)) & 1;
+		b = (n >> (n_m - s)) & 1;
 
 		if (b == 1)
 		{
