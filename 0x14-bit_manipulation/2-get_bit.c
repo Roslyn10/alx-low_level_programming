@@ -24,7 +24,7 @@ int get_bit(unsigned long int n, unsigned int index)
 	/**1UL is used to specify the type and size of the constant 1**/
 
 	/**Applies the bitmask and checks the isolate bit**/
-	b_v = (n & bit) ?: 0;
+	b_v = (n & bit) ? 1 : 0;
 
 	return (b_v);
 }
