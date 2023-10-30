@@ -15,7 +15,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	size_t bread;
 	ssize_t bwritten;
 
-	if (!filename) 
+	if (!filename)
 	{
 		return (-1);
 	}
