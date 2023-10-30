@@ -15,7 +15,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	size_t bread;
 	ssize_t bwritten;
 
-	if (!filename)
+	if (!filename) 
 	{
 		return (-1);
 	}
@@ -31,7 +31,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (-1);
 	}
 	bread = fread(buffer, 1, letters, file);
-
 	if (bread <= 0)
 	{
 		free(buffer);
@@ -39,7 +38,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (-1);
 	}
 	buffer[bread] = '\0';
-
 	bwritten = write(STDOUT_FILENO, buffer, bread);
 	if (bwritten < 0 || (size_t)bwritten != bread)
 	{
@@ -47,7 +45,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		fclose(file);
 		return (-1);
 	}
-
 	free(buffer);
 	fclose(file);
 	return (bread);
