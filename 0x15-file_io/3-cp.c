@@ -11,53 +11,55 @@
 int main (int argc, char *argv[])
 {
 	const char *file_from, *file_to;
-	int fd_source, fd_dest;
+	int fd_from, fd_to;
 	char buffer[Buffer_Size];
-	ssize_t bread, bwritten;
+	ssize_t bread;
 
 	if (argc != 3)
 	{
-		e_exit(97, "Usage: cp file_from file_to\n", argv[0]);
+		dprintf(STDERR_FILENO, "Usage: %s file_from file_to\n",argv[0]);
+		exit(97);
 	}
 
 	file_from = argv[1];
 	file_to = argv[2];
 
-	fd_source = open(file_from, O_RDONLY);
-	if (fd_source == -1)
+	fd_from = open(file_from, O_RDONLY);
+	if (fd_from == -1)
 	{
-		e_exit(98, "Error: Can't read from file %s\n", *file_from);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
+		exit(98);
 	}
 
-	fd_dest = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
-	if (fd_dest == -1)
+	fd_to = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0644);
+	if (fd_to == -1)
 	{
-		e_exit(99, "Error: Can't write to file %s\n", file_to);
+		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", file_to);
+		exit(99);
 	}
 
-	while ((bread = read(fd_source, buffer, Buffer_Size)) > 0)
+	while ((bread = read(fd_from, buffer, sizeof(buffer))) > 0)
 	{
-		bwritten = write(fd_dest, buffer, bread);
-		if (bwritten == -1 || bwritten != bread)
+		if (write(fd_to, buffer, bread) == -1)
 		{
-			e_exit(99, "Error: Can'twrite to %s\n", file_to);
+			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", file_to);
+			exit(99);
 		}
 	}
-
 	if (bread == -1)
 	{
-		e_exit(98, "Error: Can't read from file %s\n", file_from);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
+		exit(98);
 	}
-
-	if (close(fd_source) == -1)
+	if (close(fd_from) == -1)
 	{
-		e_exit(100, "Error: Can't close fd %d\n", fd_source);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_from);
+		exit(100);
 	}
-
-	if (close(fd_dest) == -1)
+	if(close(fd_to) == -1)
 	{
-		e_exit(100, "Error: Can't close fd %d\n", fd_dest);
+		dprintf(STDERR_FILENO, "Error: Can't close f %d\n", fd_to);
+		exit(100);
 	}
-
 	return (0);
 }
