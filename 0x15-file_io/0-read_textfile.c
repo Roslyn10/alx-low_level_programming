@@ -31,20 +31,24 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (-1);
 	}
 	bread = fread(buffer, 1, letters, file);
-	fclose(file);
+
 	if (bread <= 0)
 	{
 		free(buffer);
+		fclose(file);
 		return (-1);
-		
 	}
 	buffer[bread] = '\0';
-	fclose(file);
 
 	bwritten = write(STDOUT_FILENO, buffer, bread);
 	if (bwritten < 0 || (size_t)bwritten != bread)
 	{
+		free(buffer);
+		fclose(file);
 		return (-1);
 	}
+
+	free(buffer);
+	fclose(file);
 	return (bread);
 }
