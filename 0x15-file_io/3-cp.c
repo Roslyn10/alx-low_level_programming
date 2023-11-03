@@ -8,58 +8,46 @@
  * Return: 98 if file_form doesnt exist, or 99 if write fails
  */
 
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
-	const char *file_from, *file_to;
-	int fd_from, fd_to;
+	int fdr, fdw, y, n, o;
 	char buffer[Buffer_Size];
-	ssize_t bread;
 
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "Usage: %s file_from file_to\n",argv[0]);
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-
-	file_from = argv[1];
-	file_to = argv[2];
-
-	fd_from = open(file_from, O_RDONLY);
-	if (fd_from == -1)
+	fdr = open(argv[1], O_RDONLY);
+	if (fdr < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-
-	fd_to = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0644);
-	if (fd_to == -1)
+	fdw = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	while ((y = read(fdr, buffer, Buffer_Size)) > 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", file_to);
-		exit(99);
-	}
-
-	while ((bread = read(fd_from, buffer, sizeof(buffer))) > 0)
-	{
-		if (write(fd_to, buffer, bread) == -1)
+		if (fdw < 0 || write(fdw, buffer, y) != y)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", file_to);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+			close(fdr);
 			exit(99);
 		}
 	}
-	if (bread == -1)
+	if (y < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	if (close(fd_from) == -1)
+	n = close(fdr);
+	o = close(fdw);
+	if (n < 0 || o < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_from);
-		exit(100);
-	}
-	if(close(fd_to) == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close f %d\n", fd_to);
-		exit(100);
+		if (n < 0)
+			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fdr);
+		if (o < 0)
+			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fdw);
+			exit(100);
 	}
 	return (0);
 }
