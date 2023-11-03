@@ -14,7 +14,7 @@ void check_file(unsigned char *e_ident)
 
 	for (index = 0; index < 4; index++)
 	{
-		if(e_ident[index] != 127 &&
+		if (e_ident[index] != 127 &&
 		   e_ident[index] != 'E' &&
 		   e_ident[index] != 'L' &&
 		   e_ident[index] != 'F')
@@ -83,7 +83,7 @@ void print_class(unsigned char *e_ident)
 /**
  * print_data - A function that prints the data of an ELF header file
  * Description - Prints the data of an ELF header file
- * @e_indent: A pointer to an array containing the ELF class
+ * @e_ident: A pointer to an array containing the ELF class
  * Return: Nothing
  */
 
@@ -180,7 +180,7 @@ void print_osabi(unsigned char *e_ident)
 }
 
 /**
- * print_abi A function that prints the ABI version of an ELF header file
+ * print_abi - A function that prints the ABI version of an ELF header file
  * Description - Prints the ABI version of an ELF header
  * @e_ident: A pointer to an array containing the ELF ABI version
  * Return: Nothing
@@ -299,7 +299,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Memory allocation failed\n");
 		exit(98);
 	}
-	r = read(o, header,sizeof(Elf64_Ehdr));
+	r = read(o, header, sizeof(Elf64_Ehdr));
 	if (r == -1)
 	{
 		free(header);
