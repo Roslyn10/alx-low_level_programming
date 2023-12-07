@@ -9,12 +9,24 @@
 
 size_t print_dlistint(const dlistint_t *h)
 {
-	struct Node* current = head;
+	const dlistint_t *current = h;
 
 	while (current != NULL)
 	{
-		printf("%d ", current->data);
-		current = current->next;
-
+		printf("%d\n", current->n);
+		current = current-> next;
 	}
+
+	current = h;
+	while (current->next != NULL)
+	{
+		current = current->next;
+	}
+
+	while (current != NULL)
+	{
+		current = current->prev;
+	}
+
+	return (0);
 }
