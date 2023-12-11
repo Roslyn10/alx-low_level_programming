@@ -9,19 +9,19 @@
 
 int _putchar(char c)
 {
-        return (0);
+	return (0);
 }
 
 /**
  * _islower - A function
  * Descrption -
  * @c:
- * Return:
+ * Return: 
  */
 
 int _islower(int c)
 {
-        return (0);
+	return (0);
 }
 
 /**
@@ -33,19 +33,19 @@ int _islower(int c)
 
 int _isalpha(int c)
 {
-        return (0);
+	return (0);
 }
 
 /**
  * _abs - A function
- * Description -
+ * Description - 
  * @n:
  * Return:
  */
 
 int _abs(int n)
 {
-        return (0);
+	return (0);
 }
 
 /**
@@ -57,31 +57,31 @@ int _abs(int n)
 
 int _isupper(int c)
 {
-        return (0);
+	return (0);
 }
 
 /**
  * _isdigit - A function
- * Description -
+ * Description - 
  * @c:
  * Return:
  */
 
 int _isdigit(int c)
 {
-        return (0);
+	return (0);
 }
 
 /**
  * _strlen - A function
- * Description -
+ * Description - 
  * @s:
  * Return:
  */
 
 int _strlen(char *s)
 {
-        return (0);
+	return (0);
 }
 
 /**
@@ -93,12 +93,12 @@ int _strlen(char *s)
 
 void _puts(char *s)
 {
-        return (0);
+	return (0);
 }
 
 /**
  * _strcpy - A function
- * Description -
+ * Description - 
  * @dest:
  * @src:
  * Return:
@@ -106,19 +106,19 @@ void _puts(char *s)
 
 char *_strcpy(char *dest, char *src)
 {
-        return (0)
+	return (0)
 }
 
 /**
  * _atoi - A function
- * Description -
+ * Description - 
  * @s:
  * Return:
  */
 
 int _atoi(char *s)
 {
-        return (0);
+	return (0);
 }
 
 /**
@@ -131,12 +131,12 @@ int _atoi(char *s)
 
 char *_strcat(char *dest, char *src)
 {
-        return (0);
+	return (0);
 }
 
 /**
  * _strncat - A function
- * Description -
+ * Description - 
  * @dest:
  * @src:
  * @n:
@@ -145,12 +145,12 @@ char *_strcat(char *dest, char *src)
 
 char *_strncat(char *dest, char *src, int n)
 {
-        return (0);
+	return (0);
 }
 
 /**
  * _strncpy - A function
- * Description -
+ * Description - 
  * @dest:
  * @src:
  * @n:
@@ -159,12 +159,12 @@ char *_strncat(char *dest, char *src, int n)
 
 char *_strncpy(char *dest, char *src, int n)
 {
-        return (0);
+	return (0);
 }
 
 /**
  * _strcmp - A function
- * Description -
+ * Description - 
  * @s1:
  * @s2:
  * @n:
@@ -173,12 +173,12 @@ char *_strncpy(char *dest, char *src, int n)
 
 int _strcmp(char *s1, char *s2)
 {
-        return (0);
+	return (0);
 }
 
 /**
  * _memset - A function
- * Description -
+ * Description - 
  * @s:
  * @b:
  * @n:
@@ -187,7 +187,7 @@ int _strcmp(char *s1, char *s2)
 
 char *_memset(char *s, char b, unsigned int n)
 {
-        return (0);
+	return (0);
 }
 
 /**
@@ -201,12 +201,12 @@ char *_memset(char *s, char b, unsigned int n)
 
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-        return (0);
+	return (0);
 }
 
 /**
  * _strchr - A function
- * Description -
+ * Description - 
  * @s:
  * @c:
  * Return:
@@ -214,12 +214,12 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 
 char *_strchr(char *s, char c)
 {
-        return (0);
+	return (0);
 }
 
 /**
  * _strspn - A function
- * Description -
+ * Description - 
  * @s:
  * @accept:
  * Return:
@@ -227,12 +227,12 @@ char *_strchr(char *s, char c)
 
 unsigned int _strspn(char *s, char *accept)
 {
-        return (0);
+	return (0);
 }
 
 /**
  * _strpbrk - A function
- * Description -
+ * Description - 
  * @s:
  * @accpet:
  * Return:
@@ -240,12 +240,12 @@ unsigned int _strspn(char *s, char *accept)
 
 char *_strpbrk(char *s, char *accept)
 {
-        return (0);
+	return (0);
 }
 
 /**
  * _strstr - A function
- * Description -
+ * Description - 
  * @haystack:
  * @needles:
  * Return:
@@ -253,5 +253,6 @@ char *_strpbrk(char *s, char *accept)
 
 char *_strstr(char *haystack, char *needle)
 {
-        return (0);
+	return (0);
 }
+
