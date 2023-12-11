@@ -64,3 +64,5 @@ First C repository that contains the below directories containing lessons learnt
 
 
 * 0x17-doubly_linked_lists
+
+* 0x18-dynamic_libraries
