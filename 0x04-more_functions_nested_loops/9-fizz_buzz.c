@@ -30,7 +30,6 @@ int main(void)
 		}
 		if (z == 100)
 			continue;
-		printf(" ");
 	}
 
 	printf("\n");
