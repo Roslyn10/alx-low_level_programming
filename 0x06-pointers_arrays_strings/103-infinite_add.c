@@ -10,14 +10,3 @@
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int len  = 0;
-	int f = 0;
-	char t;
-
-	while (*(n +len) != '\0')
-	{
-		len++;
-	}
-	len--;
-
-
