@@ -3,7 +3,7 @@
 /**
  * _puts - Prints a string
  * Description - Prints a string, followed by a new line
- * @str: Character string
+ * @s: Character string
  * Return: 0 Always (Success)
  */
 void _puts(char *s)
