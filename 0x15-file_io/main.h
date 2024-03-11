@@ -18,10 +18,6 @@ int append_text_to_file(const char *filename, char *text_content);
 void e_exit(int code, const char *format, ...);
 int main(int argc, char *argv[]);
 
-/**
- * Elf headers
- */
-
 void check_file(unsigned char *e_ident);
 void print_magic(unsigned char *e_ident);
 void print_class(unsigned char *e_ident);
